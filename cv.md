@@ -16,3 +16,27 @@ HTML, CSS, SASS, BEM, JS(BASIC), GIT(BASIC)
 Project source code
 [ Travel ](https://github.com/vladpro42/rsschool-cv-Stage-0/tree/gh-pages/travel)
 [Momentum](https://github.com/vladpro42/rsschool-cv-Stage-0/tree/gh-pages/momentum)
+
+### Education and courses:
+Secondary specialized education in the specialty "Automated electric drive".
+
+JS / FRONT-END (RU) STAGE #0
+
+### Language: 
+A1
+
+### Code examples: 
+```
+function(arrow) {  
+    let res;  
+    arrow.forEach( item => {  
+        if( item === 'hello world'){  
+            res = item;  
+        }  
+    });  
+    return res;  
+} 
+```  
+
+
+
