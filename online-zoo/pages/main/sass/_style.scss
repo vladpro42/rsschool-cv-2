@@ -1,0 +1,24 @@
+$black: #000;
+$white: #fff;
+
+%displayFlexCenterCeter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%fontRoboto {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0145px;
+    line-height: 120%;
+}
+
+%fontLink {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}

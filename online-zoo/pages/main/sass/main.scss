@@ -1,7 +1,93 @@
+@import '_style.scss';
+
 html {
     box-sizing: border-box;
 }
 
 *, *::after, *::before {
     box-sizing: inherit;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header{
+    background-color: $black;
+}
+
+.header__inner{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo{
+    @extend %displayFlexCenterCeter;
+}
+
+.title{
+    @extend %fontRoboto;
+}
+
+.logo__title{
+    border: 1px solid $white;
+    border-radius: 2px;
+    color: $white;
+    text-align: center;
+    padding: 3.55px 4.75px;
+}
+
+.navigation{
+    margin-left: 67.75px;
+}
+
+.navigation__list{
+    @extend %displayFlexCenterCeter;
+    justify-content: start;
+}
+
+.navigation__item + .navigation__item {
+    margin-left: 58px;
+}
+
+.navigation__link{
+    @extend %fontLink;
+    color: $white;
+}
+
+.designed{
+    margin-left: 438px;
+
+    .designed__text{
+        @extend %fontLink;
+        color: $white;
+    }
+}
+
+.watch {
+    background: url(/assets/images/pandaBack.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
