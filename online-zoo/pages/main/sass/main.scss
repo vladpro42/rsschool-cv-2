@@ -55,7 +55,7 @@ button{
 }
 
 .title{
-    @extend %fontRoboto;
+    @extend %fontRobotoH1;
 }
 
 .logo__title{
@@ -99,6 +99,7 @@ button{
     background-image: url(../../../assets/images/pandaBack.jpg);
     background-size: cover; 
     height: 780px;
+    margin-bottom: 60px;
 }
 
 .watch__inner{
@@ -159,3 +160,40 @@ button{
     margin-right: 99px;
 }
 
+.backstage{
+    position: relative;
+}
+
+.backstage__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 87px;
+}
+
+.backstage__title{
+    @extend %font_title;
+    margin-bottom: 20px;
+}
+
+.backstage__text {
+    @extend %fontLink;
+    line-height: 130%;
+    font-weight: 400;
+    margin-bottom: 54px;
+}
+
+h3.backstage__title {
+    font-size: 24px;
+    margin-bottom: 34px;
+}
+
+.backstage__text--font {
+    line-height: 140%;
+}
+
+.backstage__flower {
+    position: absolute;
+    top: -128px;
+    right: 0;
+}

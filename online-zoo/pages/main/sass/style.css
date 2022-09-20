@@ -12,7 +12,7 @@
   line-height: 120%;
 }
 
-.designed .designed__text, .navigation__link {
+.backstage__text, .designed .designed__text, .navigation__link {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -31,6 +31,14 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+}
+
+.backstage__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
 }
 
 html {
@@ -120,6 +128,7 @@ button {
   background-image: url(../../../assets/images/pandaBack.jpg);
   background-size: cover;
   height: 780px;
+  margin-bottom: 60px;
 }
 
 .watch__inner {
@@ -174,6 +183,42 @@ button {
   text-transform: uppercase;
   color: #fff;
   margin-right: 99px;
+}
+
+.backstage {
+  position: relative;
+}
+
+.backstage__wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 87px;
+}
+
+.backstage__title {
+  margin-bottom: 20px;
+}
+
+.backstage__text {
+  line-height: 130%;
+  font-weight: 400;
+  margin-bottom: 54px;
+}
+
+h3.backstage__title {
+  font-size: 24px;
+  margin-bottom: 34px;
+}
+
+.backstage__text--font {
+  line-height: 140%;
+}
+
+.backstage__flower {
+  position: absolute;
+  top: -128px;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

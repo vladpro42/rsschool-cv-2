@@ -1,6 +1,7 @@
 $black: #000;
 $white: #fff;
 $yellow: #FFEE2E;
+$gray_blue: #333B41;
 
 %displayFlexCenterCeter {
     display: flex;
@@ -8,7 +9,7 @@ $yellow: #FFEE2E;
     justify-content: center;
 }
 
-%fontRoboto {
+%fontRobotoH1 {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -35,4 +36,12 @@ $yellow: #FFEE2E;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+}
+
+%font_title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
 }
