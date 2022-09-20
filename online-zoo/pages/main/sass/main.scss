@@ -24,6 +24,14 @@ a {
     text-decoration: none;
 }
 
+button{
+    padding: 0;
+    border: none;
+    margin: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .container{
     max-width: 1160px;
     margin: 0 auto;
@@ -86,8 +94,68 @@ a {
 }
 
 .watch {
-    background: url(/assets/images/pandaBack.jpg) no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    background-position-y: -80px;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/images/pandaBack.jpg);
+    background-size: cover; 
+    height: 780px;
 }
+
+.watch__inner{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.watch__box{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &::before {
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        width: 465px;
+        height: 465px;
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        left: calc(50% - 465px/2 + 242.5px);
+        top: 90px;
+        z-index: 1;
+    }
+}
+
+.watch__title{
+    @extend %fontFamilyRoboto;
+    font-weight: 700;
+    font-size: 106.496px;
+    line-height: 75%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    position: relative;
+    z-index: 2;
+    margin-top: 86px;
+    margin-bottom: 60px;
+
+    .watch__title--orange {
+        color: $yellow;
+    }
+}
+
+.btn {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    width: 298px;
+    height: 54px;
+}
+
+.watch__btn {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    @extend %font_style_button;
+    margin-right: 99px;
+}
+
