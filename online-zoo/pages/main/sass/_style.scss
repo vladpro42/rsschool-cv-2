@@ -3,6 +3,8 @@ $white: #fff;
 $yellow: #FFEE2E;
 $gray_blue: #333B41;
 
+$headerHeigth: -80px;
+
 %displayFlexCenterCeter {
     display: flex;
     align-items: center;
@@ -22,7 +24,7 @@ $gray_blue: #333B41;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 140%;
+    line-height: 22px;
 }
 
 %fontFamilyRoboto {
@@ -45,3 +47,4 @@ $gray_blue: #333B41;
     font-size: 48px;
     line-height: 120%;
 }
+
