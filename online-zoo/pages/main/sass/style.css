@@ -26,7 +26,7 @@
   font-style: normal;
 }
 
-.footer__box:nth-child(3) .footer__enter .footer__enter-btn, .footer__box:nth-child(3) .footer__enter .footer__input, .footer__box:nth-child(1) .footer__btn, .testimonials__btn, .testimonials__inner h6.testimonials__title, .watch__btn {
+.footer__box:nth-child(3) .footer__enter .footer__enter-btn, .footer__box:nth-child(3) .footer__enter .footer__input, .footer__box:nth-child(1) .footer__btn, .testimonials__btn, .testimonials__inner h6.testimonials__title, .pick__btn, .watch__btn {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -124,12 +124,32 @@ button {
 .navigation__link {
   color: #fff;
 }
+.navigation__link:hover {
+  color: #FE9013;
+}
+.navigation__link:active {
+  color: #4B9200;
+}
+
+.navigation__link--activ {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
 .designed {
   margin-left: 438px;
 }
 .designed .designed__text {
   color: #fff;
+}
+.designed .designed__text:hover {
+  color: #FE9013;
+}
+.designed .designed__text:active {
+  color: #4B9200;
 }
 
 .watch {
@@ -194,6 +214,32 @@ button {
   text-transform: uppercase;
   color: #fff;
   margin-right: 99px;
+  position: relative;
+  z-index: 2;
+  /* &::before {
+      content: "";
+      display: block;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $hover_orange;
+      border-radius: 25px;
+      transition: opacity 0.3s linear;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      z-index: -1;
+  } 
+  &:hover::before {
+      opacity: 1;  
+  }    */
+}
+.watch__btn:hover {
+  background: #FE9013;
+}
+.watch__btn:active {
+  background: #4B9200;
 }
 
 .backstage {
@@ -263,14 +309,63 @@ h3.backstage__title {
   border: 1px solid;
   border-color: #FA6F32 #FE9013 #FE9013 #FA6F32;
 }
+.slide__container .slide__box {
+  position: relative;
+  margin-bottom: 8px;
+  transition: transform 400ms ease-in, margin 400ms ease-in, color 400ms linear;
+}
+.slide__container .slide__box::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 363.7px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 5px 0 0;
+  transition: background 400ms ease-in;
+}
+.slide__container .slide__box:hover {
+  transform: scale(1.05);
+}
+.slide__container .slide__box:hover::after {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slide__container .slide__box--active {
+  margin-top: -85px;
+  transition: margin 400ms ease-in, color 400ms linear;
+}
+.slide__container .slide__box--active .slide__title, .slide__container .slide__box--active .subtitle {
+  color: #fff;
+}
 .slide__container .slide__box-img {
   width: 100%;
+  height: auto;
   border-radius: 5px 5px 0 0;
-  margin-bottom: 8px;
+  object-fit: contain;
 }
 .slide__container .slide__content {
   margin-left: 16px;
   position: relative;
+}
+.slide__container .fruit::after {
+  content: "";
+  background: url(../../../assets/images/slider/BananAndBambook.svg), no-repeat;
+  width: 33px;
+  height: 37px;
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+.slide__container .meat::after {
+  content: "";
+  background: url(../../../assets/images/slider/MeetFish.svg), no-repeat;
+  width: 48px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  right: 8px;
 }
 .slide__container .slide__title {
   text-transform: uppercase;
@@ -289,6 +384,9 @@ h3.backstage__title {
   height: 62px;
   border-radius: 50%;
 }
+.slider__pagination:active {
+  background: #4B9200;
+}
 
 .btn__wrap {
   margin-top: 80px;
@@ -302,6 +400,13 @@ h3.backstage__title {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+}
+.btn__wrap .slider__btn:hover {
+  background: #E47209;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn__wrap .slider__btn:active {
+  background: #4B9200;
 }
 
 .slider__wrap-flower {
@@ -345,6 +450,10 @@ h3.backstage__title {
   row-gap: 10px;
   margin-left: 99px;
 }
+.pick__inner .pick__text .pick__text-link {
+  color: inherit;
+  border-bottom: 1px solid #FE9013;
+}
 .pick__inner .pick__text + .pick__text {
   margin-top: 10px;
 }
@@ -367,13 +476,6 @@ h3.backstage__title {
 .works__wrap {
   max-width: 764px;
   margin: 0 auto;
-  /* display: grid;
-  grid-template-columns: 168px 69px 168px 69px 168px;
-  grid-template-rows: 244px;
-  column-gap: 30.5px;
-  align-items: center;
-  justify-content: center;
-  justify-items: center; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,6 +511,15 @@ h3.backstage__title {
 
 .pick__btn {
   margin-bottom: 59px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.pick__btn:hover {
+  background: #FE9013;
+}
+.pick__btn:active {
+  background: #4B9200;
 }
 
 .testimonials {
@@ -501,6 +612,12 @@ h3.backstage__title {
   color: #fff;
   margin-bottom: 183px;
 }
+.testimonials__btn:hover {
+  background: #FE9013;
+}
+.testimonials__btn:active {
+  background: #4B9200;
+}
 
 .footer {
   background: #111115;
@@ -531,6 +648,12 @@ h3.backstage__title {
   text-transform: uppercase;
   color: #fff;
 }
+.footer__box:nth-child(1) .footer__btn:hover {
+  background: #FE9013;
+}
+.footer__box:nth-child(1) .footer__btn:active {
+  background: #4B9200;
+}
 .footer__box:nth-child(1) .footer__item-contact + .footer__item-contact {
   margin-top: 10px;
 }
@@ -548,10 +671,25 @@ h3.backstage__title {
   margin-right: 12px;
 }
 .footer__box:nth-child(1) .footer__contact-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: #fff;
+}
+.footer__box:nth-child(1) .footer__contact-link:hover {
+  color: #FE9013;
+}
+.footer__box:nth-child(1) .footer__contact-link:hover i {
+  color: #FE9013;
+}
+.footer__box:nth-child(1) .footer__contact-link:active {
+  color: #4B9200;
+}
+.footer__box:nth-child(1) .footer__contact-link:active i {
+  color: #4B9200;
 }
 
 .footer__box:nth-child(2) {

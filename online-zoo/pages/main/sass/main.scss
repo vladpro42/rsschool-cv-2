@@ -83,6 +83,22 @@ button{
 .navigation__link{
     @extend %fontLink;
     color: $white;
+
+    &:hover {
+        color: $orange13;
+    }
+
+    &:active {
+        color: $green;
+    }
+}
+
+.navigation__link--activ {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .designed{
@@ -91,6 +107,14 @@ button{
     .designed__text{
         @extend %fontLink;
         color: $white;
+
+        &:hover {
+            color: $orange13;
+        }
+
+        &:active {
+            color: $green;
+        }
     }
 }
 
@@ -160,6 +184,35 @@ button{
     color: $white;
     @extend %font_style_button;
     margin-right: 99px;
+    position: relative;
+    z-index: 2;
+
+      /* &::before {
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $hover_orange;
+        border-radius: 25px;
+        transition: opacity 0.3s linear;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+    } 
+    &:hover::before {
+        opacity: 1;  
+    }    */  
+    &:hover {
+        background: $orange13;
+    }
+
+    &:active {
+        background: $green;
+        
+    }
 }
 
 .backstage{
@@ -232,15 +285,72 @@ h3.backstage__title {
         border-color:  #FA6F32 #FE9013 #FE9013 #FA6F32;
     }
 
+    .slide__box {
+        position: relative;
+        margin-bottom: 8px;
+        transition: transform 400ms ease-in, margin 400ms ease-in, color 400ms linear;
+
+         &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 363.7px;
+            background-color: rgb(0, 0, 0, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px 5px 0 0;
+            transition:  background 400ms ease-in;
+        } 
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:hover::after {
+            background-color: rgb(0, 0, 0, 0.7);
+        }
+    }
+
+    .slide__box--active {
+        margin-top: -85px;
+        transition: margin 400ms ease-in, color 400ms linear;
+
+        .slide__title, .subtitle{
+            color: $white;
+        }
+    }
+
     .slide__box-img{
         width: 100%;
+        height: auto;
         border-radius: 5px 5px 0 0;
-        margin-bottom: 8px;
+        object-fit: contain;
     }
 
     .slide__content {
         margin-left: 16px;
         position: relative;
+    }
+
+    .fruit::after {
+        content: '';
+        background: url(../../../assets/images/slider/BananAndBambook.svg),no-repeat;
+        width: 33px;
+        height: 37px;
+        position: absolute;
+        top: 0;
+        right: 12px;
+    }
+
+    .meat::after {
+        content: '';
+        background: url(../../../assets/images/slider/MeetFish.svg),no-repeat;
+        width: 48px;
+        height: 38px;
+        position: absolute;
+        top: 0;
+        right: 8px;
     }
 
     .slide__title{
@@ -263,6 +373,10 @@ h3.backstage__title {
     width: 62px;
     height: 62px;
     border-radius: 50%;
+
+    &:active {
+        background: #4B9200;    
+    }
 }
 
 .btn__wrap{
@@ -278,6 +392,15 @@ h3.backstage__title {
         text-transform: uppercase;
         @extend %fontLink;
         color: $white;
+
+        &:hover {
+            background: $hover_orange;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &:active {
+            background: $green;
+        }
     }
 }
 
@@ -329,6 +452,11 @@ h3.backstage__title {
         line-height: 130%;
         row-gap: 10px;
         margin-left: 99px;
+
+        .pick__text-link {
+            color: inherit;
+            border-bottom: 1px solid #FE9013;
+        }
     }
 
     .pick__text + .pick__text {
@@ -357,13 +485,6 @@ h3.backstage__title {
 .works__wrap {
     max-width: 764px;
     margin: 0 auto;
-    /* display: grid;
-    grid-template-columns: 168px 69px 168px 69px 168px;
-    grid-template-rows: 244px;
-    column-gap: 30.5px;
-    align-items: center;
-    justify-content: center;
-    justify-items: center; */  
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -401,6 +522,18 @@ h3.backstage__title {
 
 .pick__btn {
     margin-bottom: 59px;
+    @extend %font_style_button;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+
+    &:hover {
+        background: $orange13;
+    }
+
+    &:active {
+        background: $green;
+    }
 }
 
 .testimonials {
@@ -519,6 +652,14 @@ h3.backstage__title {
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 183px;
+
+    &:hover {
+        background: $orange13;
+    }
+
+    &:active {
+        background: $green;
+    }
 }
 
 .footer {
@@ -552,6 +693,14 @@ h3.backstage__title {
         text-align: center;
         text-transform: uppercase;
         color: $white;
+
+        &:hover {
+            background: $orange13;
+        }
+    
+        &:active {
+            background: $green;
+        }
     }
 
     .footer__item-contact + .footer__item-contact {
@@ -575,11 +724,28 @@ h3.backstage__title {
     }
 
     .footer__contact-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         @extend %fontFamilyRoboto;
         font-weight: 400;
         font-size: 16px;
         line-height: 140%;
         color: #fff;
+
+        &:hover {
+            color: $orange13;
+            i {
+                color: $orange13;
+            }
+        }
+
+        &:active {
+            color: $green;
+            i {
+                color: $green;
+            }
+        }
     }
 }
 
@@ -609,7 +775,6 @@ h3.backstage__title {
     .footer__enter {
         display: flex;
         flex-direction: row;
-        //background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);;
 
         .footer__input {
             margin-right: 10px;
@@ -621,7 +786,6 @@ h3.backstage__title {
             background-color: $black_footer;
             border: 0.7px solid;    
             border-radius: 2px;
-            //border-image-source: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
             &:focus {
                 outline: none;
             }
@@ -659,7 +823,8 @@ h3.backstage__title {
     
 }
 
- 
+
+
         
 
 
