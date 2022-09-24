@@ -283,7 +283,7 @@ h3.backstage__title {
 
 .slider__wrap-flower{
     position: absolute;
-    bottom: -100px;
+    bottom: -105px;
     left: 0;
 }
 
@@ -295,6 +295,7 @@ h3.backstage__title {
 .pick {
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
+    padding: 69px 0 100px;
 }
 
 .pick__inner{
@@ -403,7 +404,17 @@ h3.backstage__title {
 }
 
 .testimonials {
-    padding-top: 140px;
+    padding-top: 137px;
+    position: relative;
+
+
+    .leav__container{
+        position: absolute;
+        right: 0;
+        bottom: -135px;
+        max-width: 100%;
+    }
+   
 }
 
 .testimonials__inner {
@@ -514,6 +525,7 @@ h3.backstage__title {
     background: $black_footer;  
     padding-top: 40px;
     padding-bottom: 50px;
+    position: relative;
 }
 
 .footer__inner {
@@ -582,10 +594,10 @@ h3.backstage__title {
 }
 
 .footer__box:nth-child(3) {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px;
+    row-gap: 216px;
 
     .footer__title {
         @extend %font_title;
@@ -613,7 +625,6 @@ h3.backstage__title {
             &:focus {
                 outline: none;
             }
-           
         }
 
         .footer__enter-btn {
@@ -625,11 +636,26 @@ h3.backstage__title {
             @extend %font_style_button;
             font-weight: 400;
             color: $green;
-        }
-
-        
+        }  
     }
 
+    .footer__dev-link {
+        align-self: end;
+        justify-self: end;
+
+        .footer__text-avtor {
+            @extend %fontFamilyRoboto;
+            font-weight: 100;
+            font-size: 16px;
+            line-height: 21px;
+            color: $white;
+            opacity: 0.3;
+        }
+
+        .footer__text-avtor + .footer__text-avtor {
+            margin-top: 10px;
+        }
+    } 
     
 }
 
