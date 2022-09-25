@@ -1,0 +1,94 @@
+.column__wrap .column__wrap-text, .donate__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.donate__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.watch {
+  background-image: url(../../../assets/images/donate/panda_bg.jpg);
+  height: 390px;
+  margin-bottom: 0;
+}
+
+.pick__inner {
+  background: transparent;
+  backdrop-filter: none;
+  border-radius: initial;
+}
+
+.donate__wrap:nth-child(2) {
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+
+.pick {
+  padding-top: 40px;
+}
+
+.pick__inner .pick__subtitle {
+  margin-left: 92px;
+}
+
+.donate__title {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.donate__text {
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.donate__title--active {
+  margin-bottom: 60px;
+  color: #FE9013;
+}
+
+.pick__inner .pick__title {
+  padding: 40px 0 20px 0;
+}
+
+.donate__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column__wrap {
+  margin-right: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.column__wrap .column__wrap-text {
+  font-weight: 400;
+  text-align: center;
+  color: #333B41;
+}
+.column__wrap .column__wrap-text--font {
+  margin-bottom: 11px;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 80%;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.column__krest {
+  margin-right: 64px;
+}
+
+/*# sourceMappingURL=style.css.map */
