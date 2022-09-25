@@ -16,6 +16,11 @@ $headerHeigth: -80px;
     @include navigation__link--activ;
 }
 
+%slider__border-img {
+    border: 1px solid;
+    border-image-source: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+}
+
 %displayFlexCenterCeter {
     display: flex;
     align-items: center;
