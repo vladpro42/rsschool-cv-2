@@ -307,7 +307,22 @@ h3.backstage__title {
 .slide__container .slide {
   border-radius: 5px;
   border: 1px solid;
-  border-color: #FA6F32 #FE9013 #FE9013 #FA6F32;
+  position: relative;
+  background: #fff;
+  background-clip: padding-box; /* !importanté */
+  border: solid 1px transparent; /* !importanté */
+}
+.slide__container .slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1.3px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
 }
 .slide__container .slide__box {
   position: relative;
@@ -493,9 +508,23 @@ h3.backstage__title {
   height: 168px;
   background-color: #fff;
   border-radius: 5px;
-  border: 1px solid;
+  border: 1px solid transparent;
   border-color: #FA6F32 #FE9013 #FE9013 #FA6F32;
   margin-bottom: 30px;
+  position: relative;
+  background-clip: padding-box; /* !importanté */
+}
+.works__contrainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
 .works__box-title {
@@ -552,11 +581,25 @@ h3.backstage__title {
   margin-bottom: 21px;
 }
 .testimonials__inner .testimonials__box {
-  border: 2px solid;
+  border: 2px solid transparent;
   padding: 15px 15px 19px 16px;
   border-radius: 20px;
   background: #F1F3F2;
   max-width: 268px;
+  position: relative;
+  background-clip: padding-box;
+}
+.testimonials__inner .testimonials__box::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px; /* !importanté */
+  border-radius: inherit;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 }
 .testimonials__inner .testimonials__container-title {
   margin-left: 10px;
@@ -589,11 +632,23 @@ h3.backstage__title {
   text-align: center;
   background: #F5F7F6;
   border-radius: 5px;
-  border: 1px solid transparent; /*Обводка нужной толщины, но прозрачная*/
-  box-shadow: inset 0px 0px 0px 100vw #fff; /*Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку*/
-  border-radius: 60px; /*Скругляет углы*/
-  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(0deg, #F5F7F6, #F5F7F6);
+  border: 1px solid transparent;
+  border-radius: 60px;
   margin-bottom: 31px;
+  background-clip: padding-box;
+  position: relative;
+}
+.testimonials__scroollbar::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -1px; /* !importanté */
+  border-radius: inherit;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(0deg, #F5F7F6, #F5F7F6);
 }
 
 .testimonials__scroollbar-slider {
@@ -716,15 +771,37 @@ h3.backstage__title {
   display: flex;
   flex-direction: row;
 }
-.footer__box:nth-child(3) .footer__enter .footer__input {
+.footer__box:nth-child(3) .footer__enter label {
+  border: 0.7px solid transparent;
+  border-radius: 2px;
+  position: relative;
+  z-index: 2;
+  background-clip: padding-box;
   margin-right: 10px;
-  max-width: 228px;
+}
+.footer__box:nth-child(3) .footer__enter label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  margin: -0.7px;
+}
+.footer__box:nth-child(3) .footer__enter .footer__input {
+  width: 228px;
   height: 42px;
   padding: 10px 7px 10px 10px;
   font-weight: 400;
   background-color: #111115;
-  border: 0.7px solid;
+  border: 0.7px solid transparent;
+  background-clip: padding-box;
   border-radius: 2px;
+  color: #BDBDBD;
+  position: relative;
 }
 .footer__box:nth-child(3) .footer__enter .footer__input:focus {
   outline: none;
