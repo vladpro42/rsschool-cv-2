@@ -91,4 +91,129 @@
   margin-right: 64px;
 }
 
+.line__text {
+  margin-bottom: 17px;
+  width: 976px;
+  margin: 0 auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  line-height: 140%;
+}
+
+.progress-bar {
+  margin: 0 auto;
+  background: #404950;
+  border-radius: 2px;
+  width: 976px;
+  height: 27px;
+  margin-bottom: 12px;
+}
+
+.elipse__list {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.elipse__list::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 31px;
+  display: block;
+  width: 915px;
+  height: 2px;
+  background-color: #72828E;
+}
+
+.elipse__item + .elipse__item {
+  margin-left: 120px;
+}
+
+.elipse__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elipse__circle {
+  text-align: center;
+  background-color: #FFEE2E;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: block;
+  z-index: 3;
+}
+.elipse__circle.elipse__circle--margin {
+  margin-left: 26px;
+}
+
+.another {
+  margin-bottom: 86px;
+}
+
+.another__amount-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+
+.another__amount {
+  border: 1px solid #929699;
+  border-radius: 2px;
+  width: 268px;
+  height: 54px;
+  background: transparent;
+  padding: 16px 0 16px 9px;
+}
+
+.input__list-container {
+  margin-bottom: 30px;
+}
+
+.input__list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin-bottom: 30px;
+}
+
+.input__list {
+  margin-right: 10px;
+  border: 1px solid #FE9013;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: transparent;
+  appearance: none;
+}
+
+.input__list-text {
+  margin-right: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333B41;
+}
+
+.input__list-text:last-child {
+  margin-right: 0;
+}
+
+.pick__btn {
+  margin-top: 170px;
+}
+
 /*# sourceMappingURL=style.css.map */
