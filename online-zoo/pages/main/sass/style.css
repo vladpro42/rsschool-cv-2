@@ -6,7 +6,7 @@
 }
 
 .title {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 19.0145px;
@@ -14,7 +14,7 @@
 }
 
 .works__box-title, .btn__wrap .slider__btn, .slide__container .slide__title, .backstage__text, .designed .designed__text, .navigation__link {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -22,12 +22,12 @@
 }
 
 .footer__box:nth-child(3) .footer__dev-link .footer__text-avtor, .footer__box:nth-child(1) .footer__contact-link, .works__title, .pick__inner .pick__text, .slide__container .subtitle, .watch__title {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
 }
 
 .footer__box:nth-child(3) .footer__enter .footer__enter-btn, .footer__box:nth-child(3) .footer__enter .footer__input, .footer__box:nth-child(1) .footer__btn, .testimonials__btn, .testimonials__inner h6.testimonials__title, .pick__btn, .watch__btn {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -35,7 +35,7 @@
 }
 
 .footer__box:nth-child(3) .footer__title, .testimonials__inner .testimonials__title, .pick__inner .pick__subtitle, .pick__inner .pick__title, .backstage__title {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -43,7 +43,7 @@
 }
 
 .testimonials__inner .testimonials__subtitle--where .testimonials__content, .testimonials__inner .testimonials__subtitle {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -107,6 +107,16 @@ button {
   color: #fff;
   text-align: center;
   padding: 3.55px 4.75px;
+  position: relative;
+}
+.logo__title::after {
+  content: "";
+  background: no-repeat, url(../../../assets/images/bamboo__logo.svg);
+  width: 12px;
+  height: 20px;
+  position: absolute;
+  left: 9px;
+  bottom: 8px;
 }
 
 .navigation {
@@ -123,6 +133,7 @@ button {
 
 .navigation__link {
   color: #fff;
+  white-space: nowrap;
 }
 .navigation__link:hover {
   color: #FE9013;
@@ -141,6 +152,7 @@ button {
 
 .designed {
   margin-left: 438px;
+  white-space: nowrap;
 }
 .designed .designed__text {
   color: #fff;
@@ -159,6 +171,7 @@ button {
   background-size: cover;
   height: 780px;
   margin-bottom: 140px;
+  background-position-x: center;
 }
 
 .watch__inner {
