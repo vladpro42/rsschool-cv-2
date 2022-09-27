@@ -65,6 +65,17 @@ button{
     color: $white;
     text-align: center;
     padding: 3.55px 4.75px;
+    position: relative;
+
+    &::after {
+        content: '';
+        background: no-repeat, url(../../../assets/images/bamboo__logo.svg);
+        width: 12px;
+        height: 20px;
+        position: absolute;
+        left: 9px;
+        bottom: 8px;
+    }
 }
 
 .navigation{
@@ -83,6 +94,7 @@ button{
 .navigation__link{
     @extend %fontLink;
     color: $white;
+    white-space: nowrap;
 
     &:hover {
         color: $orange13;
@@ -103,6 +115,7 @@ button{
 
 .designed{
     margin-left: 438px;
+    white-space: nowrap;
 
     .designed__text{
         @extend %fontLink;
@@ -125,6 +138,7 @@ button{
     background-size: cover; 
     height: 780px;
     margin-bottom: 140px;
+    background-position-x: center;
 }
 
 .watch__inner{
