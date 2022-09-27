@@ -101,10 +101,10 @@
                                         <span class="elipse__circle"></span>
                                     </li>
                                     <li class="elipse__item">
-                                        <span class="elipse__circle"></span>
+                                        <span class="elipse__circle elipse__circle--active"></span>
                                     </li>
                                     <li class="elipse__item">
-                                        <span class="elipse__circle"></span>
+                                        <span class="elipse__circle "></span>
                                     </li>
                                     <li class="elipse__item">
                                         <span class="elipse__circle"></span>
@@ -119,22 +119,57 @@
                                         <span class="elipse__circle"></span>
                                     </li>
                                 </ul>
+                                <ul class="price__list">
+                                    <li class="price__item">
+                                        <span class="price__text">5000</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">2000</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text price__text--active">1000</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">500</span>
+                                    </li>       
+                                    <li class="price__item">
+                                        <span class="price__text">250</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">100</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">50</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">25</span>
+                                    </li>
+                                </ul>
                                 <div class="another">
-                                    <form class="another__amount-container" action="">
+                                    <label class="another__amount-container" action="">
                                         <input class="another__amount" type="number" placeholder="Another amount">
-                                    </form>
-                                    <form class="input__list-container" action="">
-                                        <input class="input__list" type="radio"> <span class="input__list-text">Monthly</span>
-                                        <input class="input__list" type="radio"> <span class="input__list-text">Once</span>
-                                    </form>
+                                    </label>
+                                    <div class="input__list-box">
+                                        <label class="input__list-container" for="inp" action="">
+                                            <input class="input__list" name="list" id="inp" type="radio" checked>
+                                            <span class="input__list--style">.</span> <span class="input__list-text">Monthly</span>
+                                        </label>
+                                        <label class="input__list-container" for="inp" action="">
+                                            <input class="input__list" name="list" id="" type="radio" > 
+                                            <span class="input__list--style">.</span> <span class="input__list-text">Once</span>
+                                        </label>
+                                    </div>
+                                   
+                                    
                                 </div>
                                 
                             </div>
                         </div>
-                        <div class="pick__btn-container">
+                        <div class="donate__btn-container">
                             <button class="btn pick__btn">
                                 Feed a friend now
                             </button>
+                            <p class="pick__end-text">Share with your friends on social networks </p>
                         </div>
                     </div>
                     </div>
@@ -148,7 +183,7 @@
                 <div class="footer__box">
                     <div class="logo">
                         <a href="../main/index.html">
-                            <h1 class="title logo__title">PetStory <br> online</h1>
+                            <h2 class="title logo__title">PetStory <br> online</h2>
                         </a>
                     </div>
                     <form action="../main/index.html">
