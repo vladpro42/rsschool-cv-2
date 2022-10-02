@@ -64,7 +64,7 @@
                     <div class="backstage__wrap">
                         <div class="backstage__box">
                             <picture class="backstage__picture">
-                                <source class="backstage__picture-img" srcset="../../assets/images/bamboo-cap.jpg" media="min-width: 1001px">
+                                <source class="backstage__picture-img" srcset="../../assets/images/media__img/bamboo-cap.jpg" media="(max-width: 1250px)">
                                 <img src="../../assets/images/bamboo-cap.jpg" alt="old man">
                             </picture>
                         </div>
@@ -74,7 +74,7 @@
                                 <p class="backstage__text">The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
                             </div>
                             <div class="backstage__content">
-                                <h3 class="backstage__title title">How it works </h3>
+                                <h3 class="backstage__title backstage__title--margin title">How it works </h3>
                                 <p class="backstage__text backstage__text--font">
                                     he main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.
                                 </p>
@@ -82,9 +82,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="backstage__flower">
+                <picture class="backstage__flower">
+                    <source media="(max-width: 999px)" srcset="../../assets/images/media__img/flower_foto1.png">
                     <img class="backstage__flower-img" src="../../assets/images/flower_foto1.jpg" alt="flower">
-                </div>
+                </picture>
             </div>
         </section>
         <section class="slider">
@@ -132,7 +133,7 @@
                                     <p class="subtitle">Mesoamerica, South America</p>
                                 </div>
                             </div>
-                            <div class="slide">
+                            <div class="slide slide--none">
                                 <div class="slide__box">
                                     <img class="slide__box-img" src="../../assets/images/slider/cheetahs 5.jpg" alt="cheetahs">
                                 </div>
@@ -141,7 +142,7 @@
                                     <p class="subtitle">Native to Africa</p>
                                 </div>
                             </div>
-                            <div class="slide">
+                            <div class="slide slide--none">
                                 <div class="slide__box">
                                     <img class="slide__box-img" src="../../assets/images/slider/penguins.jpg" alt="Penguins">
                                 </div>
@@ -151,7 +152,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="slider__pagination btn">
+                        <button class="slider__pagination slider__pagination--right btn">
                             <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.9982 0.892548L12.8935 0.7906L12.7889 0.892552L12.6487 1.02908L12.5384 1.13653L12.6487 1.24398L16.2516 4.75344H1H0.85V4.90344V5.09656V5.24656H1H16.2512L12.6487 8.75602L12.5384 8.86347L12.6487 8.97091L12.7889 9.10745L12.8935 9.2094L12.9982 9.10745L17.1047 5.10725L17.215 4.9998L17.1047 4.89236L12.9982 0.892548Z" fill="white" stroke="white" stroke-width="0.3"/>
                             </svg>
@@ -163,12 +164,19 @@
                         <button class="btn slider__btn ">choose your favorite</button>
                     </div>
                 </div>
-                <div class="slider__wrap-flower">
+                <picture class="slider__wrap-flower">
+                    <source media="(max-width: 1599px)" srcset="../../assets/images/media__img/palm_foto.png">
                     <img class="slider__flower" src="../../assets/images/palm_foto.jpg" alt="flower">
-                </div>
-                <div class="slider__wrap-flower slider__wrap-flower--right">
+                    <!-- <div class="slider__wrap-flower">
+                    </div> -->
+                </picture>
+                <picture class="slider__wrap-flower slider__wrap-flower--right">
+                    <source media="(max-width: 1599px)" srcset="../../assets/images/media__img/strelitzia_1.png">
                     <img class="slider__flower" src="../../assets/images/strelitzia 1.jpg" alt="flower">
-                </div>
+                </picture>
+                <!-- <div class="slider__wrap-flower slider__wrap-flower--right">
+                    
+                </div> -->
         </section>
         <section class="pick">
             <div class="container">
@@ -176,7 +184,7 @@
                     <h2 class="pick__title title">Pick and feed a friend</h2>
                     <p class="pick__subtitle">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
                     <p class="pick__text">During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and glad that people around the world find joy in PetStory.</p>
-                    <p class="pick__text pick__text--weight">Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider <br> a gift to our 
+                    <p class="pick__text pick__text--weight">Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider <br class="pick__br"> a gift to our 
                     <a class="pick__text-link" href="../donate/index.html">
                         Emergency Support Fund</a>
                      . </p>
@@ -317,28 +325,28 @@
                             <h2 class="title logo__title">PetStory <br> online</h2>
                         </a>
                     </div>
-                    <form action="../donate/index.html">
+                    <form class="footer__btn-container" action="../donate/index.html">
                         <button class="btn footer__btn">donate for volunteers</button>
                     </form>
                     <ul class="footer__list-contact">
                         <li class="footer__item-contact">
                             <a href="https://www.facebook.com/" class="footer__contact-link">
-                                <i class="fa-brands fa-facebook-f"></i> Facebook
+                                <i class="fa-brands fa-facebook-f"></i> <span class="footer__link-text">Facebook</span> 
                             </a>
                         </li>
                         <li class="footer__item-contact">
                             <a href="https://twitter.com/?lang=ru" class="footer__contact-link">
-                                <i class="fa-brands fa-twitter"></i> Twitter
+                                <i class="fa-brands fa-twitter"></i> <span class="footer__link-text">Twitter</span> 
                             </a>
                         </li>
                         <li class="footer__item-contact">
                             <a href="https://www.instagram.com/" class="footer__contact-link">
-                                <i class="fa-brands fa-instagram"></i> Instagram
+                                <i class="fa-brands fa-instagram"></i> <span class="footer__link-text">Instagram</span> 
                             </a>
                         </li>
                         <li class="footer__item-contact">
                             <a href="https://www.youtube.com/" class="footer__contact-link">
-                                <i class="fa-brands fa-youtube"></i> YouTube
+                                <i class="fa-brands fa-youtube"></i> <span class="footer__link-text">YouTube</span> 
                             </a>
                         </li>
                     </ul>
@@ -360,7 +368,7 @@
                     </ul>
                 </div>
                 <div class="footer__box">
-                    <div class="wrap">
+                    <div class="wrap wrap--none">
                         <h3 class="title footer__title">Subscribe to our news</h3>
                         <div class="footer__enter">
                             <label for="input">
