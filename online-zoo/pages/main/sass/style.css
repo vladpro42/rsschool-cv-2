@@ -1452,5 +1452,117 @@ h3.backstage__title {
     margin-left: 37px;
   }
 }
+@media (max-width: 600px) {
+  .backstage__flower {
+    transform: scale(0.5);
+    right: -33px;
+    top: -128px;
+  }
+  h2.backstage__title {
+    font-size: 24px;
+    color: #333B41;
+    line-height: 29px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .backstage__text {
+    font-size: 16px;
+    line-height: 21px;
+    color: #333B41;
+    width: 90%;
+  }
+  h3.backstage__title {
+    margin: 20px 0 10px 0;
+  }
+}
+@media (max-width: 576px) {
+  .watch__box::before {
+    right: 10px;
+    left: initial;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+  .header__inner .logo__title {
+    padding: 0;
+  }
+  .header__inner .logo__title::after {
+    left: 4px;
+    bottom: 2px;
+  }
+  .watch {
+    background-image: url(../../../assets/images/media__img/320px/backgoundPanda.jpg);
+    height: 186px;
+    background-position-y: 0;
+  }
+  .watch__box {
+    margin-right: 10px;
+    height: 102px;
+  }
+  .watch__box::before {
+    width: 119px;
+    height: 119px;
+    top: 0;
+    left: 0%;
+    top: 22px;
+    left: 153px;
+  }
+  .watch__inner {
+    grid-template-rows: 152px 107px;
+  }
+  .watch__title {
+    align-self: flex-start;
+    font-size: 28px;
+    line-height: 21px;
+    height: initial;
+    letter-spacing: -1.5px;
+  }
+  .watch__btn {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 100%;
+    margin-right: 0;
+  }
+  .backstage {
+    margin-top: 80px;
+    margin-bottom: 49px;
+  }
+  h2.backstage__title {
+    padding: 0;
+  }
+  h3.backstage__title {
+    padding: 0;
+  }
+  .backstage__flower {
+    transform: scale(1);
+    top: -43px;
+    right: 0;
+  }
+  .backstage__text {
+    padding: 0;
+    width: 100%;
+  }
+  .slide__container {
+    margin-left: 10px;
+    grid-template-columns: 285px;
+    grid-template-rows: repeat(4, 332px);
+    row-gap: 20px;
+  }
+  .slide__container .slide__content {
+    margin-left: 11px;
+    margin-top: 5px;
+  }
+  .slide__container .slide__box {
+    margin-bottom: 0;
+  }
+  .slider__pagination {
+    display: none;
+  }
+  .btn__wrap {
+    margin-top: 19px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
