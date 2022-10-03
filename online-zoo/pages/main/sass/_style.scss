@@ -8,9 +8,15 @@ $gray_4: #BDBDBD;
 $line_scroll: #F5F7F6;
 $black_footer: #111115;
 $green: #4B9200;
+$gray5: #767474;
+$gray2: #4F4F4F;
 $hover_orange: #E47209;
 
 $headerHeigth: -80px;
+
+$headerHeigth640: 34px;
+
+
 
 @mixin navigation__link--activ {
     @include navigation__link--activ;
@@ -81,3 +87,25 @@ $headerHeigth: -80px;
 }
 
 
+@media (max-width: 804px) {
+
+        %fontLink {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+}
+
+@media (max-width: 640px) {
+
+    %fontRobotoH1 {
+        font-size: 12.2899px;
+        line-height: 120%;
+    }
+
+    $headerHeigth: -34px;
+
+    
+
+}
+ 
