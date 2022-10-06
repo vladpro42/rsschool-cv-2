@@ -84,6 +84,108 @@ button{
     margin-left: 67.75px;
 }
 
+.burger__icon {
+    cursor: pointer;
+}
+
+.burger {
+    background: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 5;
+    transition: left 400ms ease-in-out;
+}
+
+.burger--active {
+    left: 0;
+}
+
+.burger__wrap {
+    max-width: 640px;
+    height: 329px;
+    background: #fff;
+    z-index: 4;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.close__burger {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger__title {
+    @extend %burger__link;
+    @extend %burger__title;
+    border: 1px solid $orange13;
+    color: $orange13;
+    width:58px;
+    height: 36px;
+    @extend %displayFlexCenterCeter;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+        content: '';
+        background: no-repeat url(../../../assets/images/bamboo__orange.svg);
+        width: 10px;
+        height: 16px;
+        position: absolute;
+        bottom: 7px;
+        left: 6px
+    }
+}
+
+.burger__menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    .burger__item + .burger__item {
+        margin-top: 15px;
+    }
+}
+
+.burger__link {
+    @extend %burger__link;
+    color: $gray_blue;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $green;
+    }
+}
+
+.designed__text {
+    @extend %burger__link;
+    color: $gray_blue;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $green;
+    }
+}
+
+
+
 .navigation__list{
     @extend %displayFlexCenterCeter;
     justify-content: start;
@@ -1335,13 +1437,13 @@ h3.backstage__title {
         border: none;
     }
 
-    .navigation {
+    /* .navigation {
         background: url(../../../assets/images/media__img/burger_menu.svg);
         background-repeat: no-repeat;
         width: 18px;
         height: 10px;
         margin-right: 13px;
-    }
+    } */
 
     .navigation__list {
         display: none;

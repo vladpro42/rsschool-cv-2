@@ -31,4 +31,33 @@ testimonialsContent.forEach( (item, index) => {
     } else if( index === 2 ) {
         item.textContent = 'Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. The best online zoo I’ve met. My met . My';
     }
-})
+});
+
+
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.navigation');
+const closeBurger = document.querySelector('.close__burger');
+const burgerIcon = document.querySelector('.burger__icon');
+const burgerWrap = document.querySelector('.burger__wrap');
+
+
+burgerIcon.addEventListener('click', () => {
+
+    if(burger.classList.contains('burger--active')) {
+
+    } else {
+        burger.classList.add('burger--active');
+    }
+}); 
+
+closeBurger.addEventListener('click', () => {
+    if(burger.classList.contains('burger--active')) {
+        burger.classList.remove('burger--active');
+    }
+});
+
+burger.addEventListener('click', (event) => {
+        console.log(event.target)
+        event.target.classList.remove('burger--active');
+    
+});
