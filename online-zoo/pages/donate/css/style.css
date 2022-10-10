@@ -14,6 +14,18 @@
   line-height: 47px;
 }
 
+.burger--active {
+  height: 200vh;
+}
+
+.burger {
+  height: 200vh;
+}
+
+.body--active {
+  overflow: hidden;
+}
+
 .watch {
   background-image: url(../../../assets/images/donate/panda_bg.jpg);
   height: 390px;
@@ -155,6 +167,7 @@
   height: 10px;
   display: block;
   z-index: 3;
+  cursor: pointer;
 }
 .elipse__circle.elipse__circle--margin {
   margin-left: 26px;
@@ -192,52 +205,58 @@
 .price__list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row;
   margin-bottom: 50px;
 }
 
-.price__item:nth-child(1) {
-  margin-right: 73px;
-  width: 57px;
-  height: 36px;
+.price__item {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+/* .price__item:nth-child(1) {
+    margin-right: 73px;
+    /* width: 57px; 
+    height: 36px;
 }
 
 .price__item:nth-child(2) {
-  margin-right: 73px;
-  width: 57px;
-  height: 36px;
+    margin-right: 73px;
+   /*  width: 57px; 
+    height: 36px;
 }
 
 .price__item:nth-child(3) {
-  margin-right: 52px;
-  width: 78px;
-  height: 36px;
+    margin-right: 52px;
+    width: 78px;
+    height: 36px;
 }
 
 .price__item:nth-child(4) {
-  margin-right: 73px;
-  width: 57px;
-  height: 36px;
+    margin-right: 73px;
+    width: 57px;
+    height: 36px;
 }
 
 .price__item:nth-child(5) {
-  margin-right: 73px;
-  width: 57px;
-  height: 36px;
+    margin-right: 73px;
+    width: 57px;
+    height: 36px;
 }
 
 .price__item:nth-child(6) {
-  margin-right: 58px;
-  width: 72px;
-  height: 36px;
+    margin-right: 58px;
+    width: 72px;
+    height: 36px;
 }
 
 .price__item:nth-child(7) {
-  margin-right: 88px;
-  width: 71px;
-  height: 36px;
-}
-
+    margin-right: 88px;
+    width: 71px;
+    height: 36px;
+} */
 .price__text {
   font-family: "Roboto";
   font-style: normal;
@@ -250,6 +269,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .price__text::before {
   content: "";
@@ -299,6 +319,10 @@
   height: 54px;
   background: transparent;
   padding: 16px 0 16px 9px;
+  font-size: 20px;
+  /*  &:valid {
+       border: 1px solid red;
+   } */
 }
 .another__amount:focus {
   outline: none;

@@ -1,3 +1,9 @@
+import Swiper from 'swiper';
+  // import Swiper styles
+
+  /* const swiper = new Swiper(...); */
+
+
 const slideBox = document.querySelectorAll('.slide__box');
 const slideContent = document.querySelectorAll('.slide__content');
 
@@ -61,3 +67,62 @@ burger.addEventListener('click', (event) => {
         event.target.classList.remove('burger--active');
     
 });
+
+const testimonialsBox = document.querySelectorAll('.testimonials__box');
+const testimonialsInner = document.querySelector('.testimonials__inner');
+const popupTestimonials = document.querySelector('.popup__testimonials');
+const testimonials = document.querySelector('.testimonials');
+
+
+
+
+testimonialsBox.forEach( (item, index) => {
+    item.addEventListener('click', () => {
+        popupTestimonials.classList.add('popup--active'); 
+        item.classList.add('testimonials__box--active');
+        testimonials.classList.add('testimonials--active');
+       
+    });
+});
+
+
+// SLIDER
+
+/* const swiper = new Swiper('.swiper', {
+    speed: 400,
+    spaceBetween: 100,
+    autoplay: {
+        delay: 5000,
+      },
+  }); */
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+        delay: 5000,
+      },
+
+      slidesPerView: 3,
+      spaceBetween: 30,
+      grid: {
+        rows: 2,
+      },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
