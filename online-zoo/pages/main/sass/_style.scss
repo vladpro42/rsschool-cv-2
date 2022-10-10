@@ -22,6 +22,21 @@ $headerHeigth640: 34px;
     @include navigation__link--activ;
 }
 
+%burger__title {
+    font-size: 15.2116px;
+    line-height: 120%;
+}
+
+
+%burger__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 140% */
+}
+
 %slider__border-img {
     border: 1px solid;
     border-image-source: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
