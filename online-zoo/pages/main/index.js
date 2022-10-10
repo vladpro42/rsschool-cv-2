@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+/* import Swiper from 'swiper'; */
   // import Swiper styles
 
   /* const swiper = new Swiper(...); */
@@ -45,7 +45,7 @@ const navigation = document.querySelector('.navigation');
 const closeBurger = document.querySelector('.close__burger');
 const burgerIcon = document.querySelector('.burger__icon');
 const burgerWrap = document.querySelector('.burger__wrap');
-
+const body = document.body;
 
 burgerIcon.addEventListener('click', () => {
 
@@ -54,18 +54,20 @@ burgerIcon.addEventListener('click', () => {
     } else {
         burger.classList.add('burger--active');
     }
+    body.classList.add('body--active');
 }); 
 
 closeBurger.addEventListener('click', () => {
     if(burger.classList.contains('burger--active')) {
         burger.classList.remove('burger--active');
     }
+    body.classList.remove('body--active');
 });
 
 burger.addEventListener('click', (event) => {
         console.log(event.target)
         event.target.classList.remove('burger--active');
-    
+        body.classList.remove('body--active');
 });
 
 const testimonialsBox = document.querySelectorAll('.testimonials__box');
