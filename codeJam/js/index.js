@@ -22,14 +22,22 @@ divContainer.className = 'container';
 document.body.appendChild(divContainer);
 let column = createElem(4, 4); // Создание колоки
 divContainer.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+divContainer.style.gridTemplateRows = `repeat(${column}, 1fr)`;
+
+let arrowDivBox = document.querySelectorAll('.box');
+arrowDivBox[arrowDivBox.length-1].style.background = 'white';
 
 
+arrowDivBox.forEach( (item, index) => {
+    item.dataset.position = index + 1;
 
-
-
-
-
-
+    item.addEventListener('click', () => {
+        let i = item.dataset.position ;console.log(i)
+        i = +i + 1;
+        item.dataset.position = i;  
+        console.log(i)
+    });
+});
 
 
 
@@ -54,10 +62,27 @@ hardBox.append(frameSize, hard, otherSize, btn1, btn2, btn3, btn4, btn5, btn6);
 betabeta(4, 4)
 
 
+const spanBtn = document.querySelectorAll('.span__btn');
+
+    spanBtn.forEach( (item, index) => {
+        let i = index + 3;
+        item.dataset.valueForFn = i;
+        item.addEventListener('click', () => {
+            let column = null;
+            divContainer.removeChild;
+             column = createElem(i, i); // Создание колоки
+             console.log(column)
+                divContainer.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+                divContainer.style.gridTemplateRows = `repeat(${column}, 1fr)`;
+        });
+    });
+
+
+
 function createElem(a, b) {
     let arrowDivBox = [];
     let elem;
-    let c = (a * b) - 2;
+    let c = (a * b) - 1;
     for(let i = 0; i <= c ; i++) {
         elem = document.createElement('div');
         elem.className = 'box';
@@ -66,6 +91,26 @@ function createElem(a, b) {
     }
     return a
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function innerNumText(a, b) {
     let min = 1;
@@ -121,7 +166,9 @@ function betabeta(a, b) {
     arrowBox.forEach( (item, index) => {
         
             item.textContent = `${arrowText[index]}`
-        
+            if(index === arrowText.length ) {
+                item.textContent = '';
+            }
     });
 }
 
